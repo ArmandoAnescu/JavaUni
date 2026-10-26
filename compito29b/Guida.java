@@ -2,15 +2,17 @@ public class Guida extends Impiegato{
     long telefono;
     boolean inglese;
     int app_sett;
-    double costo_ora;
 
     public Guida(int codice,String nome,long telefono,boolean inglese,int app_sett,
     double costo_ora){
-        super(codice, nome);
+        super(codice, nome,costo_ora);
         this.telefono =telefono;
         this.inglese =inglese;
         this.app_sett =app_sett;
-        this.costo_ora =costo_ora;
+    }
+
+    public double getCosto(){
+        return costo_ora;
     }
 
     public String toString(){
